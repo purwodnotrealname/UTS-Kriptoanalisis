@@ -1,7 +1,7 @@
-from encrypt import xor_encrypt
+from operations import xor_encrypt, xor_decrypt
 
 def main():
-    print("--- Binary Encryption Utility ---")
+    print("UTS Kriptoanalisis ")
     print("Select Encryption Mode:")
     print("1. standard xor")
     print("2. unassigned command")
@@ -9,15 +9,21 @@ def main():
     
     mode_choice = input("\nEnter choice : ")
     
-    plaintext_raw = input("Enter 2 char") #enter raw char plaintext
-    plaintext_bin = ''.join(format(ord(char), '08b') for char in plaintext_raw) #char to binary
+    plaintext_raw = input("Enter 2 char") # Masukkan string plaintext
+    plaintext_bytes = plaintext_raw.encode('utf-8') # encode string ke bytes
     
-    key = 0b00111001
-    #key = 0b0011010110011101 16 bit key
+    key = "NT" # hardcoded key panjang 2 bytes
+    key = int.from_bytes(key.encode('utf-8'), byteorder='big') # string to integer
 
-    if mode_choice == '1':
-        raw_result = xor_encrypt(plaintext_bin, key)
-        ciphertext = [bin(ord(c)) for c in raw_result]
+    if mode_choice == '1': # penyelesaian soal no 1
+        encrypt_result = xor_encrypt(plaintext_bytes, key)
+        ciphertext = encrypt_result
+        print(" ".join(ciphertext))
+
+        decrypt_result = xor_decrypt(ciphertext, key)
+        print("Decrypted Text:", decrypt_result)
+
+
 
     elif mode_choice == '2':
         print("unassigned command")
@@ -26,9 +32,6 @@ def main():
     else:
         print("Invalid mode selection.")
         return
-
-    print("\nResulting Binary Ciphertext:")
-    print(" ".join(ciphertext))
 
 if __name__ == "__main__":
     main()
