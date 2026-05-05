@@ -1,11 +1,11 @@
 <div align="center">
-  <h1>UTS Kriptoanalisis</h1>
+  <h1>Kriptoanalisis P8</h1>
   <p><i>Daftar Soal</i></p>
 </div>
 
 <hr>
 
-<h2>Soal 1: Kriptografi Modern <code>(35 poin)</code></h2>
+<h2>Soal 1: Kriptografi Modern <code></code></h2>
 
 <ul>
   <li><b>Buat program (Python/pseudocode) untuk:</b>
@@ -75,7 +75,7 @@
 
 <br><hr>
 
-<h2>Soal 3: Simulasi Serangan & Kelemahan Cipher <code>(30 poin)</code></h2>
+<h2>Soal 3: Simulasi Serangan & Kelemahan Cipher <code></code></h2>
 
 <p><b>Diberikan kondisi berikut:</b></p>
 <ul>
