@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Kriptoanalisis P8</h1>
+  <h1>Kriptaanalisis P8</h1>
   <p><i>Daftar Soal</i></p>
 </div>
 
