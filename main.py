@@ -1,10 +1,11 @@
-from operations import xor_encrypt, xor_decrypt
+from operations_1 import xor_encrypt, xor_decrypt
+from operations_2 import caesar_encrypt, caesar_decrypt
 
 def main():
     print("UTS Kriptoanalisis ")
     print("Select Encryption Mode:")
     print("1. standard xor")
-    print("2. unassigned command")
+    print("2. Caesar cipher")
     print("3. unassigned command")
     
     mode_choice = input("\nEnter choice : ")
@@ -23,10 +24,14 @@ def main():
         decrypt_result = xor_decrypt(ciphertext, key)
         print("Decrypted Text:", decrypt_result)
 
-
-
     elif mode_choice == '2':
-        print("unassigned command")
+        caesar_encrypt_result = caesar_encrypt(plaintext_raw, 3) # 
+        print("Caesar Encrypted Text:", caesar_encrypt_result)
+
+        caesar_decrypt_result = caesar_decrypt(caesar_encrypt_result, 3)
+        print("Caesar Decrypted Text:", caesar_decrypt_result)
+
+
     elif mode_choice == '3':
         print("unassigned command")
     else:
